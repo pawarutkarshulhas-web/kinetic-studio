@@ -1,1 +1,145 @@
-<h1>Hello from Kinetic Studio!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinetic Studio | Modern Web & Landing Pages</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .neon-glow {
+            text-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
+        }
+        .neon-border {
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+            border: 1px solid rgba(56, 189, 248, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans min-h-screen selection:bg-sky-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center border-b border-slate-800/60">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center font-bold text-xl neon-border">K</div>
+            <span class="text-xl font-bold tracking-wider">KINETIC <span class="text-sky-400 font-light">STUDIO</span></span>
+        </div>
+        <a href="#calculator" class="bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold px-5 py-2.5 rounded-xl transition shadow-lg shadow-sky-500/25">Get a Quote</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="max-w-6xl mx-auto px-6 py-20 text-center md:py-32">
+        <div class="inline-block mb-4 px-4 py-1.5 rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-400 text-sm font-medium">
+            ⚡ High-Speed Web Development for Creators & Businesses
+        </div>
+        <h1 class="text-4xl md:text-7xl font-extrabold tracking-tight mb-6 max-w-4xl mx-auto leading-tight">
+            We build websites that <span class="text-sky-400 neon-glow">move fast</span> and convert.
+        </h1>
+        <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+            Lightning-fast landing pages, custom interactive web widgets, and modern digital experiences designed to elevate your brand.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#calculator" class="bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold px-8 py-4 rounded-xl transition shadow-xl shadow-sky-500/30">Calculate Project Cost</a>
+            <a href="#features" class="border border-slate-700 hover:border-slate-500 bg-slate-900/50 font-semibold px-8 py-4 rounded-xl transition">Our Services</a>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-6">
+        <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl hover:border-sky-500/50 transition">
+            <div class="text-3xl mb-4">🚀</div>
+            <h3 class="text-xl font-bold mb-2">Lightning Fast</h3>
+            <p class="text-slate-400 text-sm">Optimized pure frontend code loaded with modern frameworks for instant page rendering.</p>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl hover:border-sky-500/50 transition">
+            <div class="text-3xl mb-4">💎</div>
+            <h3 class="text-xl font-bold mb-2">Sleek Design</h3>
+            <p class="text-slate-400 text-sm">Dark mode accents, glowing neon visuals, and mobile-responsive layouts tailored to your brand.</p>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 p-8 rounded-2xl hover:border-sky-500/50 transition">
+            <div class="text-3xl mb-4">⚙️</div>
+            <h3 class="text-xl font-bold mb-2">Interactive Widgets</h3>
+            <p class="text-slate-400 text-sm">Custom JavaScript logic, calculators, and animated user interfaces built for high engagement.</p>
+        </div>
+    </section>
+
+    <!-- Interactive Pricing Calculator -->
+    <section id="calculator" class="max-w-3xl mx-auto px-6 py-20">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 md:p-12 shadow-2xl">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl md:text-3xl font-bold mb-2">Project Cost Calculator</h2>
+                <p class="text-slate-400 text-sm">Estimate your custom build instantly.</p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Select Project Type -->
+                <div>
+                    <label class="block text-sm font-semibold mb-3 text-slate-300">Select Project Type:</label>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <button onclick="setBasePrice(3500, this)" class="type-btn p-4 rounded-xl border border-sky-500 bg-sky-500/10 text-left font-medium transition">
+                            <div class="font-bold">Landing Page</div>
+                            <div class="text-xs text-slate-400 mt-1">₹3,500 base</div>
+                        </button>
+                        <button onclick="setBasePrice(5000, this)" class="type-btn p-4 rounded-xl border border-slate-800 bg-slate-950/50 text-left font-medium transition hover:border-slate-700">
+                            <div class="font-bold">Interactive Web Tool</div>
+                            <div class="text-xs text-slate-400 mt-1">₹5,000 base</div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Add-ons -->
+                <div>
+                    <label class="block text-sm font-semibold mb-3 text-slate-300">Add Features:</label>
+                    <div class="space-y-3">
+                        <label class="flex items-center justify-between p-4 rounded-xl border border-slate-800 bg-slate-950/30 cursor-pointer hover:border-slate-700">
+                            <span class="text-sm">Custom Dark/Light Theme Toggle</span>
+                            <input type="checkbox" value="1000" onchange="calculateTotal()" class="addon-checkbox w-4 h-4 accent-sky-500 rounded">
+                        </label>
+                        <label class="flex items-center justify-between p-4 rounded-xl border border-slate-800 bg-slate-950/30 cursor-pointer hover:border-slate-700">
+                            <span class="text-sm">Advanced Animations & Transitions</span>
+                            <input type="checkbox" value="1500" onchange="calculateTotal()" class="addon-checkbox w-4 h-4 accent-sky-500 rounded">
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Total Display -->
+                <div class="pt-6 border-t border-slate-800 flex items-center justify-between">
+                    <div>
+                        <div class="text-xs text-slate-400 uppercase tracking-wider">Estimated Total</div>
+                        <div id="total-price" class="text-3xl font-extrabold text-sky-400">₹3,500</div>
+                    </div>
+                    <a href="mailto:contact@kineticstudio.dev" class="bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold px-6 py-3 rounded-xl transition shadow-lg shadow-sky-500/20">Book This Build</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="max-w-6xl mx-auto px-6 py-10 border-t border-slate-800 text-center text-sm text-slate-500">
+        &copy; 2026 Kinetic Studio. All rights reserved.
+    </footer>
+
+    <!-- Calculator Logic Script -->
+    <script>
+        let currentBasePrice = 3500;
+
+        function setBasePrice(price, element) {
+            currentBasePrice = price;
+            document.querySelectorAll('.type-btn').forEach(btn => {
+                btn.classList.remove('border-sky-500', 'bg-sky-500/10');
+                btn.classList.add('border-slate-800', 'bg-slate-950/50');
+            });
+            element.classList.remove('border-slate-800', 'bg-slate-950/50');
+            element.classList.add('border-sky-500', 'bg-sky-500/10');
+            calculateTotal();
+        }
+
+        function calculateTotal() {
+            let total = currentBasePrice;
+            document.querySelectorAll('.addon-checkbox:checked').forEach(checkbox => {
+                total += parseInt(checkbox.value);
+            });
+            document.getElementById('total-price').innerText = '₹' + total.toLocaleString('en-IN');
+        }
+    </script>
+</body>
+</html>
